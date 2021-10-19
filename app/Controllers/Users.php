@@ -31,7 +31,7 @@ class Users extends ResourceController
   {
     $uuid = service('uuid');
     $param = [
-      'id_card' => $uuid->uuid4()->toString(),
+      'id_card' => $uuid->uuid4()->toString() . '-' . $this->request->getVar('id'),
       'name' => $this->request->getVar('name'),
       'age' => $this->request->getVar('age'),
       'email' => $this->request->getVar('email'),
@@ -68,7 +68,8 @@ class Users extends ResourceController
     return $this->respondDeleted(null);
   }
 
-  public function login() {
+  public function login()
+  {
     $email = $this->request->getVar('email');
     $password = $this->request->getVar('password');
 

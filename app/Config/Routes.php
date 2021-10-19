@@ -48,6 +48,10 @@ $routes->group('apis', function ($routes) {
   $routes->resource('category');
 });
 
+$routes->group('apis', function ($routes) {
+  $routes->resource('regis');
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
