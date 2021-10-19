@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Restaurant extends Model
+class User extends Model
 {
   protected $table = 'member';
   protected $primaryKey = 'id_card';

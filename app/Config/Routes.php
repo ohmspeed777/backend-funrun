@@ -41,6 +41,11 @@ $routes->setAutoRoute(true);
 
 $routes->group('apis', function ($routes) {
   $routes->resource('users');
+  $routes->post('users/login', 'Users::login');
+});
+
+$routes->group('apis', function ($routes) {
+  $routes->resource('category');
 });
 
 /*
